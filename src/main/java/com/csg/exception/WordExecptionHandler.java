@@ -12,7 +12,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
+/**
+ * 
+ * @author jaishankerpandey
+ *
+ */
 @RestControllerAdvice
 public class WordExecptionHandler {
 	public static Logger logger = org.slf4j.LoggerFactory.getLogger(WordExecptionHandler.class);
@@ -22,7 +26,11 @@ public class WordExecptionHandler {
 
 		return new ResponseEntity(ex.getLocalizedMessage(), HttpStatus.BAD_REQUEST);
 	}
-
+/**
+ * This method is responsible to handale exception globally
+ * @param ex  contains exception details
+ * @return
+ */
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public Map<String, String> handleInvalidArgument(MethodArgumentNotValidException ex) {

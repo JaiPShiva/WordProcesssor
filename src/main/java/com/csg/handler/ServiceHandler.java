@@ -17,18 +17,26 @@ import com.csg.exception.WordExecptionHandler;
 import com.csg.model.WordRequest;
 import com.csg.model.WordResponse;
 import com.csg.service.WordsService;
-
+/**
+ * 
+ * @author jaishankerpandey
+ *
+ */
 @RestController
 public class ServiceHandler {
 	public static Logger logger = org.slf4j.LoggerFactory.getLogger(WordExecptionHandler.class);
 	@Autowired
 	WordsService wordService;
-	
+	/**
+	 * This is post mapping request
+	 * @param request :contains the list words need to process
+	 * @return
+	 */
 	@RequestMapping(value = "/words",method = RequestMethod.POST,consumes =MediaType.APPLICATION_JSON_VALUE ,produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<WordResponse> getWordsDetails(@RequestBody @Valid  WordRequest request) {
-		logger.info("getWordsDetails request {}",request);
+		logger.info("getWordsDetails request processing started {}",request);
 		WordResponse response=  wordService.processWords(request);
-		logger.info("getWordsDetails response {}",response);
+		logger.info("getWordsDetails response processing completed{}",response);
 		return new ResponseEntity<WordResponse>(response,HttpStatus.OK);
 		
 		
