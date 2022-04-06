@@ -8,8 +8,15 @@ Hints
 - Make sure you implement this test like you would all your production code (Documentation, unit tests, build/packaging, etc.).
 - Business rules change and new ones pop up all the time; how will you account for this?
 - Please don't input words from standard input, no one likes to type long list of names manually.
+Endpoint->http://localhost:8080/words
+Method-Post
 
-Success Request:
+Palyload Details:
+words:  Contains List of words
+filter: Contains String by which we can filter.
+length: Conatins numberic value for word length filter.
+
+Success Request Sample:
 {
 	"words":[
 "JaiShanker",
@@ -25,8 +32,11 @@ Success Request:
 	"filter":"M",
 	"length":2
 }
+Response Details:
+countWords: will provide key value pair where key is filtered word and value is the count.
+words:  will provide list of words based on length.
 
-Success Response:
+Success Response Sample:
 {
     "countWords": {
         "Man": 2,
