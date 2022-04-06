@@ -12,11 +12,11 @@ Endpoint->http://localhost:8080/words
 Method-Post
 
 Palyload Details:
-words:  Contains List of words
-filter: Contains String by which we can filter.
-length: Conatins numberic value for word length filter.
+-words:  Contains List of words
+-filter: Contains String by which we can filter.
+-length: Conatins numberic value for word length filter.
 
-Success Request Sample:
+-Success Request Sample:
 {
 	"words":[
 "JaiShanker",
@@ -33,10 +33,10 @@ Success Request Sample:
 	"length":2
 }
 Response Details:
-countWords: will provide key value pair where key is filtered word and value is the count.
-words:  will provide list of words based on length.
+-countWords: will provide key value pair where key is filtered word and value is the count.
+-words:  will provide list of words based on length.
 
-Success Response Sample:
+-Success Response Sample:
 {
     "countWords": {
         "Man": 2,
