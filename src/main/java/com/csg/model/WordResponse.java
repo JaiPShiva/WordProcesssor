@@ -2,7 +2,11 @@ package com.csg.model;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+ * 
+ * @author jaishankerpandey
+ *
+ */
 public class WordResponse {
 
 	private Map<String, Long> countWords;

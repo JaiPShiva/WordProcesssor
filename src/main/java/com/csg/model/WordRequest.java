@@ -6,7 +6,11 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
+/**
+ * 
+ * @author jaishankerpandey
+ *
+ */
 public class WordRequest {
 	@NotNull(message = "list of words can not be null or blank")
 	private List<String> words;
